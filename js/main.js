@@ -259,12 +259,12 @@
     if (submitBtn) submitBtn.disabled = true;
 
     try {
-      const response = await fetch("4e2c4ca1-8462-45b7-abae-fce1a368f129", {
-        method: "POST",
-        body: formData
-      });
-      const result = await response.json();
-
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+          });
+          const result = await response.json(); 
+          
       if (result.success) {
         status.textContent = "¡Mensaje enviado! Gracias por escribir a ALBOR.";
         form.reset();
